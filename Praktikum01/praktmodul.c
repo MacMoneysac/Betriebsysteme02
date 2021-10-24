@@ -1,7 +1,7 @@
-#include <linux / kernel.h>
-#include <linux / module.h>
-#include <linux / timer.h>
-#include <linux / types.h>
+#include <linux/kernel.h>
+#include <linux/module.h>
+#include <linux/timer.h>
+#include <linux/types.h>
 
 #define PRINTK(x...) printk(KERN_DEBUG "Praktmodul: " x)
 
