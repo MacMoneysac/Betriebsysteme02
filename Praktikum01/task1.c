@@ -63,6 +63,10 @@ static void skeleton_daemon()
         close(x);
     }
 
+    // fclose(stdin);
+    // fclose(stdout);
+    // fclose(stderr);
+
     /* Open the log file */
     openlog("firstdaemon", LOG_PID, LOG_DAEMON);
 }
