@@ -62,7 +62,7 @@ static ssize_t procfs_write(struct file *file, const char __user *buffer,
         procfs_buffer_size = PROCFS_MAX_SIZE;
     else
         procfs_buffer_size = len;
-    if (copy_from_user(procfs_buffer, buffer, procfs_buffer_size))
+    if (copy_from_user(procfs_buffer, buffer + *offset, procfs_buffer_size))
         return -EFAULT;
 
     pr_info("procfs_write: write %lu bytes\n", procfs_buffer_size);
